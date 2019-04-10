@@ -24,7 +24,8 @@ function encodeMark(string, watermark) {
   for (let i = 0, length = watermark.length; i < length; i ++) {
     const utf16 = watermark.charCodeAt(i);
     const binaryString = utf16.toString(2);
-    result += binaryString.split('').map(d => zeroWidthChar[Number(d)]).join('') + zeroWidthChar[2]
+    const joinChar = i === length - 1 ? '' : zeroWidthChar[2];
+    result += binaryString.split('').map(d => zeroWidthChar[Number(d)]).join('') + joinChar
   }
   return {
     string: string.slice(0, 1) + result + string.slice(1),
@@ -57,7 +58,7 @@ function decodeMark(string) {
   };
 }
 
-export default {
+module.exports = {
   encodeMark,
   decodeMark,
   removeZeroWidthChar
