@@ -4,7 +4,8 @@
   "description": "JavaScript 字符串中水印的编码和解码",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src/index.js -d lib"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
   },
   "homepage": "https://github.com/zengkan0703/text-watermark#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "jest": "^24.7.1"
   }
 }
