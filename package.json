@@ -2,7 +2,7 @@
   "name": "text-watermark",
   "version": "1.0.0",
   "description": "JavaScript 字符串中水印的编码和解码",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "babel src/index.js -d lib"
