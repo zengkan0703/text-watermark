@@ -1,7 +1,7 @@
 {
-  "name": "text-watermark",
+  "name": "text-watermarker",
   "version": "1.0.0",
-  "description": "JavaScript 字符串中水印的编码和解码",
+  "description": "A watermark tool for put text watermark on string",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/zengkan0703/text-watermark.git"
   },
   "keywords": [
-    "string水印"
+    "watermark", "string", "text", "marker", "text watermark"
   ],
   "author": "",
   "license": "ISC",
