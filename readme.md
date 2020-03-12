@@ -1,6 +1,8 @@
 ## JavaScript 字符串中水印的编码和解码
 
 看到 [[翻译]小心你复制的内容：使用零宽字符将用户名不可见的插入文本中](https://www.codesky.me/archives/be-careful-what-you-copy-invisibly-inserting-usernames-into-text-with-zero-width-characters.wind) 这篇文章觉得很奇妙，就按照这个思路实现了一下一样的功能。
+### 安装
+> npm i text-watermarker
 ### 测试
 > npm run test
 
