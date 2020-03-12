@@ -1,5 +1,4 @@
-const TextWartermark = require('./index');
-const { encodeMark, decodeMark, removeZeroWidthChar } = TextWartermark;
+import { encodeMark, decodeMark, removeZeroWidthChar } from "./index"
 
 describe('字符串水印', () => {
   test('移除零宽字符', () => {

@@ -7,12 +7,12 @@ const zeroWidthChar = [
 const zeroWidthCharReg = new RegExp(`[${zeroWidthChar.join('')}]`, 'g')
 
 //清空字符串中的零宽字符
-function removeZeroWidthChar(string) {
+export function removeZeroWidthChar(string) {
   return string.replace(zeroWidthCharReg, '')
 }
 
 //添加水印
-function encodeMark(string, watermark) {
+export function encodeMark(string, watermark) {
   string = removeZeroWidthChar(string);
   if (!string.length) {
     return {
@@ -34,7 +34,7 @@ function encodeMark(string, watermark) {
 }
 
 //解码水印
-function decodeMark(string) {
+export function decodeMark(string) {
   if (!string.length) {
     return {
       success: false, error: '原字符串不能为空'
@@ -56,10 +56,4 @@ function decodeMark(string) {
   return {
     mark, success: true
   };
-}
-
-module.exports = {
-  encodeMark,
-  decodeMark,
-  removeZeroWidthChar
 }
