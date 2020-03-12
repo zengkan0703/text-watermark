@@ -12,14 +12,14 @@ export function removeZeroWidthChar(string) {
 }
 
 //添加水印
-export function encodeMark(string, watermark) {
-  string = removeZeroWidthChar(string);
+export function encodeMark(str, mark) {
+  const string = removeZeroWidthChar(str);
+  const watermark = removeZeroWidthChar(mark);
   if (!string.length) {
     return {
-      string, success: false, error: '原字符串不能为空'
+      string, success: false, error: 'target string cannot be empty'
     }
   }
-  watermark = removeZeroWidthChar(watermark);
   let result = '';
   for (let i = 0, length = watermark.length; i < length; i ++) {
     const utf16 = watermark.charCodeAt(i);
@@ -37,7 +37,7 @@ export function encodeMark(string, watermark) {
 export function decodeMark(string) {
   if (!string.length) {
     return {
-      success: false, error: '原字符串不能为空'
+      success: false, error: 'target string cannot be empty'
     }
   }
   const charArr = string.match(zeroWidthCharReg);
